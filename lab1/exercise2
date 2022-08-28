@@ -1,0 +1,38 @@
+* cat file1 file2 file3 | grep grape *
+
+using the "cat" command with parameters "file1 file2 file3" takes the contents of these three
+files combined as the input, making it available for further use with other commands.
+If no other commands are issued, the content would be outputted to the terminal window.
+Since here the command "|" (pipe) is used in conjunction, the output of the cat command is instead
+used as input for the "grep" command with parameter "grape". This searches the content of the
+input for the string "grape". If any matches are found, the lines which contains the string
+"grape" are outputted to the terminal window, since this is the default output.
+
+
+* cat file1 file2 file3 file4 | grep cat *
+
+this command is almost identical to the first. this time the contents of file1, file2, file3 and file4
+are used as input for the grep command with parameter cat.
+
+
+* who | wc -l *
+
+the command "who" gives you information about who is logged into the system, what processes
+they are running, and when they logged into the system. since we are using the "|" command,
+we are piping the output of the "who" command to the input of the "wc" command with parameter "-l".
+the "wc" command takes an input and outputs the wordcount. since we are using the parameter"-l",
+it outputs the amount of lines in the input. since the input is the "who" command, and this
+command outputs one line per logged in user, this effectively outputs an integer telling us
+how many users are logged into the system.
+
+
+* who | wc -l > file1 *
+
+this is almost identical to the previous command, with the difference being that this time the 
+output is written to a file called "file1" instead of being outputted to the terminal window.
+
+
+* sort < file1 > file2 *
+
+this command takes the contents of file1 as input to the "sort" command and outputs the sorted
+content to file2. the "sort" command alphabetically or numerically sorts a list.
