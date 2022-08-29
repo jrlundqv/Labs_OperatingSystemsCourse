@@ -1,3 +1,5 @@
+EXERCISE 2
+
 * cat file1 file2 file3 | grep grape *
 
 using the "cat" command with parameters "file1 file2 file3" takes the contents of these three
@@ -36,3 +38,24 @@ output is written to a file called "file1" instead of being outputted to the ter
 
 this command takes the contents of file1 as input to the "sort" command and outputs the sorted
 content to file2. the "sort" command alphabetically or numerically sorts a list.
+
+
+EXERCISE 3
+
+1. Which command (and its options) are used to completely remove an empty directory?
+
+To completely remove an empty directory, one would use the "rmdir" command.
+"--ignore-fail-on-non-empty" does not output error messages for failures caused by non-empty directories.
+"-p" removes all directories in a path if they are empty. rmdir -p a/b/c would remove directories
+a, b and c.
+"-v" outputs a diagnostic for every directory processed
+"--help" displays available optional commands
+"--version" outputs version information
+
+
+2. What would you type in your terminal to learn more about command "pwd"?
+
+"pwd --help" would output available optional commands.
+"man pwd" gives you a full overview of what the command does, how to format potential options
+and other parameters, and all available optional commands. It also includes a link to the
+full documentation.
