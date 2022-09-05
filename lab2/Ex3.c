@@ -16,14 +16,13 @@ int main() {
 
 			if (j == 0) A[j] = 1; // Sørger for at første indeks alltid er 1
 			else {
-
 				if (j == i-1) A[j] = 1; // Sørger for at siste indeks alltid er 1
 				else A[j] = B[j-1] + B[j]; // Hovedlogikken bak tallrekken
 			}
 		}
 
 		for (j = 0; j < i; j++) B[j] = A[j]; /* Løkke som kopierer nåværende array slik at den
-												kan brukes til å kalkulere og skrive neste array */
+							kan brukes til å kalkulere og skrive neste array */
 
 		for (j = 0; j < i; j++) printf("%5d", A[j]); // Printer hvert array på en linje 
 	}
