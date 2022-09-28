@@ -1,0 +1,5 @@
+* waitpid.c start *
+I am the child!
+I am the parent!
+Child 15488 is done, status is 42
+* waitpid.c end *

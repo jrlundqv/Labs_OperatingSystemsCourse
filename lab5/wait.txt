@@ -1,0 +1,5 @@
+* wait.c start *
+I am the child!
+I am the parent!
+Child 15471 is done, status is 42
+* wait.c end *

@@ -10,6 +10,6 @@ int main() {
     fork();
     fork();
     printf("Process %d's parent process ID is %d\n", getpid(), getppid());
-    sleep(2);
+//    sleep(30);
     return 0;
 }

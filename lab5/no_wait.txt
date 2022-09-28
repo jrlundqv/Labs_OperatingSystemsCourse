@@ -1,0 +1,5 @@
+* no_wait.c start *
+I am the parent!
+Child 15484 is done, status is 0
+I am the child!
+* no_wait.c end *

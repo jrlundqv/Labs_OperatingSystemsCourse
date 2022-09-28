@@ -7,15 +7,15 @@ int main(int argc, const char * argv[])
 {
 	int status = 0;
 	pid_t child = fork();
-	
+
 	if ( 0 == child) {
 		printf("I am the child!\n");
-		sleep(1);
+		sleep(2);
 		return 42;
 	} else if ( 0 < child ) {
 		wait(&status);
                 printf("I am the parent!\n");
-		printf("Child %lu is done, status is %d\n", child, WEXITSTATUS(status));
+		printf("Child %d is done, status is %d\n", child, WEXITSTATUS(status));
 		return 0;
 	} else {
 		perror("fork");
