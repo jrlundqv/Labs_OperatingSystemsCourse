@@ -83,7 +83,8 @@ int main(int argc, char *argv[]) {
     char readFileName0[14];
 
     /* Run scheduling algorithms */
-    
+    // how the output is suopsed to look
+    // printf("Process %d started at time %d and finished at time %d\n", proc[i].id, proc[i].starttime, proc[i].endtime);
     first_come_first_served(argv[1]);
    
     shortest_remaining_time_next(argv[1]);
