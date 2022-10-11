@@ -34,43 +34,34 @@ int read_file (char fileName[14]) {
 }
 
 void first_come_first_served (char argv[14]) {
-    char readFileName[14];
-    strcat(readFileName, argv);
-
-    
-    int numberOfProcesses = read_file(readFileName);
-    
+    char readFileName[14]= "";
+    strcat(readFileName, argv); 
+  
     char writeFileName[] = "FCFS";
     strcat(writeFileName, readFileName);
 
     FILE *FCFSfile;
-    
-
 
     FCFSfile = fopen(writeFileName, "w");
-
-    for (int i=0; i<numberOfProcesses; i++) {
-        // YOUR CODE FOR FCFS HERE
-    }
+    // YOUR CODE FOR FCFS HERE
+   
 
     fclose(FCFSfile);
 }
 
 
-void shortest_remaining_time_next (char argv[14]) {
+void shortest_remaining_time (char argv[14]) {
 
-    char readFileName[14];
-    strcat(readFileName, argv);  
-  
+    char readFileName[14]= "";
+    strcat(readFileName, argv);    
+
+    
     char writeFileName[] = "STRN";
     strcat(writeFileName, readFileName);
     
-    FILE *STRNfile;
-    
-   
+    FILE *STRNfile; 
 
     STRNfile = fopen(writeFileName, "w");
-    
    // YOUR CODE FOR SRTN HERE
     
     fclose(STRNfile);
@@ -83,13 +74,13 @@ int main(int argc, char *argv[]) {
     char readFileName0[14];
 
     /* Run scheduling algorithms */
-    // how the output is suopsed to look
+    
+    // how the output is supposed to look
     // printf("Process %d started at time %d and finished at time %d\n", proc[i].id, proc[i].starttime, proc[i].endtime);
+    
     first_come_first_served(argv[1]);
-   
-    shortest_remaining_time_next(argv[1]);
-    
-    
+
+    shortest_remaining_time(argv[1]);    
 
     return 0;
 }
