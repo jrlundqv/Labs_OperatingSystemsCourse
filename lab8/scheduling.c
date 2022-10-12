@@ -37,6 +37,8 @@ void first_come_first_served (char argv[14]) {
     char readFileName[14]= "";
     strcat(readFileName, argv); 
   
+    int numberOfProcesses = read_file(readFileName);
+  
     char writeFileName[] = "FCFS";
     strcat(writeFileName, readFileName);
 
@@ -54,8 +56,9 @@ void shortest_remaining_time (char argv[14]) {
 
     char readFileName[14]= "";
     strcat(readFileName, argv);    
-
-    
+  
+    int numberOfProcesses = read_file(readFileName);
+  
     char writeFileName[] = "STRN";
     strcat(writeFileName, readFileName);
     
