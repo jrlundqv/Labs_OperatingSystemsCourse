@@ -24,6 +24,7 @@ int read_file(char fileName[14])
 	FILE *pFile;
 	pFile = fopen(fileName, "r");
 
+<<<<<<< HEAD
 	if (pFile == NULL)
 	{
 		printf("Error! Could not open file\n");
@@ -38,6 +39,24 @@ int read_file(char fileName[14])
 	}
 	fclose(pFile);
 	return i;
+=======
+void first_come_first_served (char argv[14]) {
+    char readFileName[14]= "";
+    strcat(readFileName, argv); 
+  
+    int numberOfProcesses = read_file(readFileName);
+  
+    char writeFileName[] = "FCFS";
+    strcat(writeFileName, readFileName);
+
+    FILE *FCFSfile;
+
+    FCFSfile = fopen(writeFileName, "w");
+    // YOUR CODE FOR FCFS HERE
+   
+
+    fclose(FCFSfile);
+>>>>>>> cd8bf78f5e52688fea5d9d521133326942188098
 }
 
 
@@ -47,10 +66,22 @@ void first_come_first_served(char argv[14], int n)
 	char readFileName[14]= "";
 	strcat(readFileName, argv);
 
+<<<<<<< HEAD
 	char writeFileName[] = "FCFS";
 	strcat(writeFileName, readFileName);
 
 	FILE *FCFSfile;
+=======
+    char readFileName[14]= "";
+    strcat(readFileName, argv);    
+  
+    int numberOfProcesses = read_file(readFileName);
+  
+    char writeFileName[] = "STRN";
+    strcat(writeFileName, readFileName);
+    
+    FILE *STRNfile; 
+>>>>>>> cd8bf78f5e52688fea5d9d521133326942188098
 
 	FCFSfile = fopen(writeFileName, "w");
 
