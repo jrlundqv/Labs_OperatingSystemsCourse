@@ -1,0 +1,7 @@
+This is a source text
+This
+text
+file
+has
+seven
+lines
