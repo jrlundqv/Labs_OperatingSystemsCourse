@@ -9,7 +9,7 @@
 int main(){
     // Create a new message queue
 
-   mqd_t mqd = mq_open ("/Introduction2OS", O_CREAT | O_WRONLY, 0600, NULL);
+   mqd_t mqd = mq_open ("/Introduction2OS", O_CREAT | O_EXCL | O_WRONLY, 0600, NULL);
     // check if message queue creation is succesful or not
     if (mqd == -1){
         perror ("mq_open");
